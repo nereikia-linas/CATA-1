@@ -1,0 +1,83 @@
+@import 'spalvos.scss';
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-clmn {
+  display: flex;
+  flex-direction: column;
+}
+
+.talking {
+  @include flex-clmn;
+  align-items: center;
+  flex-wrap: wrap;
+  background: $pearl-white;
+  padding-bottom: 80px;
+
+  .text {
+    @include flex-row;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+  }
+
+  .people {
+    @include flex-row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .person {
+    @include flex-clmn;
+    align-items: center;
+    width: 30%;
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .img {
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    box-shadow: 1px 5px 3px $grej-shadow;
+  }
+
+  .Mar {
+    background-image: url(../img/testimonials-1.jpg);
+    background-size: cover;
+  }
+  .Fre {
+    background-image: url(../img/testimonials-2.jpg);
+    background-size: cover;
+  }
+  .Ser {
+    background-image: url(../img/testimonials-3.jpg);
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width:321px) {
+  .talking {
+    @include flex-clmn;
+    flex-wrap: nowrap;
+
+    .person {
+      width: 100%;
+      padding-left: 40px;
+      padding-right: 40px;
+
+      .img {
+        margin-top: 40px;
+      }
+    }
+  }
+}

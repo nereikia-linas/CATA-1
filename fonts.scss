@@ -1,0 +1,56 @@
+@import 'spalvos.scss';
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+
+  header {
+    font-size: 0.9em;
+  }
+
+  h1 {
+    margin: 20px;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 1em;
+    line-height: 1.4em;
+    color: $grej-grej;
+  }
+
+  .person, .icon p {
+    font-size: 0.8em;
+    line-height: 1.2em;
+  }
+
+  .headerBox a {
+    text-decoration: none;
+    color: $just-black;
+  }
+
+  .rights a {
+    text-decoration: none;
+    color: $blu-blu;
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width:321px) {
+  body {
+    letter-spacing: 0;
+
+    h1 {
+      font-size: 1.8em;
+    }
+
+    h2 {
+      margin-bottom: 2px;
+    }
+  }
+}

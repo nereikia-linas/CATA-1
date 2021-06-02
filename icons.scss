@@ -1,0 +1,54 @@
+@import 'spalvos.scss';
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-clmn {
+  display: flex;
+  flex-direction: column;
+}
+
+.icons {
+  @include flex-row;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: $pearl-white;
+
+  .icon {
+    @include flex-clmn;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 30%;
+    text-align: center;
+
+    i {
+      font-size: 3em;
+      color: $blu-blu;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width:321px) {
+  .icons {
+    @include flex-clmn;
+
+    .icon {
+      width: 100%;
+      margin-top: 0px;
+    }
+  }
+
+  .icons:nth-of-type(3) {
+    margin-bottom: 30x;
+  }
+}

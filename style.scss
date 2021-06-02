@@ -1,0 +1,18 @@
+@import 'resetas.scss';
+@import 'fonts.scss';
+@import 'spalvos.scss';
+@import 'header.scss';
+@import 'buttonblue.scss';
+@import 'signups.scss';
+@import 'icons.scss';
+@import 'showcase.scss';
+@import 'talking.scss';
+@import 'rights.scss';
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 960px;
+  min-width: 320px;
+}

@@ -1,0 +1,44 @@
+@import 'spalvos.scss';
+
+@mixin shapeX {
+  height: 30px;
+  border: 0;
+  border-radius: 5px;
+}
+
+@mixin shapeY {
+  padding-left: 30px;
+  padding-right: 30px;
+  background: $blu-blu;
+  color: $just-white;
+  cursor: pointer;
+}
+
+.buttonblue1 {
+  @include shapeX;
+  height: 25px;
+  @include shapeY;
+}
+
+.buttonblue {
+  @include shapeX;
+  @include shapeY;
+}
+
+input {
+  @include shapeX;
+  width: 60%;
+  margin-right: 6px;
+  padding-left: 10px;
+}
+
+@media screen and (max-width:321px) {
+  input {
+    width: 305px;
+    margin-left: 0;
+  }
+  .buttonblue {
+    width: 305px;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,94 @@
+@import 'spalvos.scss';
+
+@mixin signup-s {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  color: $just-white;
+  text-align: center;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-clmn {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup {
+  @include signup-s;
+  height: 400px;
+  margin-top: 40px;
+  background-image: url(../img/bg-masthead.jpg);
+}
+
+.bottomsignup {
+  @include signup-s;
+  height: 200px;
+  background-image: url(../img/bg-masthead.jpg);
+}
+
+.up {
+  @include flex-row;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+
+  .up-left {
+    @include flex-row;
+    justify-content: flex-end;
+    width: 65%;
+  }
+
+  .up-right {
+    @include flex-row;
+    justify-content: flex-start;
+    width: 35%;
+  }
+}
+
+@media screen and (max-width:601px) {
+  .up {
+    width: 100%;
+
+    .up-left {
+      @include flex-row;
+      width: 355px;
+    }
+
+    .up-right {
+      @include flex-row;
+      width: 245px;
+    }
+  }
+}
+
+@media screen and (max-width:321px) {
+  .up {
+    @include flex-clmn;
+    align-items: center;
+    justify-content: center;
+    margin: 0, auto;
+    width: 100%;
+
+    .up-left {
+      @include flex-row;
+      align-items: flex-end;
+      width: 100%;
+      margin-bottom: 0.8vh;
+    }
+
+    .up-right {
+      @include flex-clmn;
+      align-items: center;
+      width: 100%;
+    }
+  }
+}

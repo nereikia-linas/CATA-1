@@ -1,0 +1,84 @@
+@mixin img-box {
+  background-size: cover;
+  width: 50%;
+  height: 300px;
+}
+
+.showcase {
+  display: flex;
+  flex-flow: row wrap;
+
+  .row {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    height: 300px;
+  }
+
+  .one, .three {
+    display: flex;
+    flex-flow: row-reverse;
+  }
+
+  .two {
+    display: flex;
+    flex-flow: row;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 50%;
+  }
+
+  .txt {
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+  }
+
+  .fullyimg {
+    background-image: url(../img/bg-showcase-1.jpg);
+    @include img-box;
+  }
+
+  .updatedimg {
+    background-image: url(../img/bg-showcase-2.jpg);
+    @include img-box;
+  }
+  .customimg {
+    background-image: url(../img/bg-showcase-3.jpg);
+    @include img-box;
+  }
+}
+
+@media screen and (max-width:321px) {
+  .showcase {
+    flex-flow: column nowrap;
+
+    .row {
+      flex-direction: column;
+      width: 100%;
+      height: 600px;
+
+      .box {
+        width: 100%;
+      }
+
+      .txt {
+        width: 200%;
+        padding: 30px;
+      }
+
+      .three {
+        flex-direction: column;
+      }
+
+      .fullyimg, .updatedimg, .customimg {
+        width: 100%;
+        height: 600px;
+      }
+    }
+  }
+}
